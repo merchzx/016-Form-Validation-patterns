@@ -82,6 +82,16 @@
             }
         });
 
+        form.emailInput.addEventListener("input", function () {
+            if (form.emailInput.value != "admin@example.com" || form.emailInput.value != "superuser@example.com" ||form.emailInput.value != "user@example.com" ) {
+                form.emailInput.setCustomValidity("Выберите другой еmail адресс ");
+            }
+            else {
+                form.emailInput.setCustomValidity(""); 
+                form.emailInput.setCustomValidity("");
+            }
+        });
+
         /*
         Задание:
         Доработайте валидацию формы. Поле ввода Email не должно содержать значения
